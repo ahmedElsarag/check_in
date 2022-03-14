@@ -1,3 +1,4 @@
+import 'package:check_in/misc/AppColor.dart';
 import 'package:check_in/pages/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,7 @@ class _ResortsState extends State<Resorts> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: AppColors.mainColor,
         title: Text('Resorst',style: TextStyle(color: Colors.white),),
         leading: Icon(Icons.arrow_back_ios_rounded),
         actions: [
@@ -36,11 +38,11 @@ class _ResortsState extends State<Resorts> {
         showSelectedLabels: true,
         showUnselectedLabels: true,
         unselectedItemColor: Colors.grey,
-        selectedItemColor: Colors.redAccent,
+        selectedItemColor:  AppColors.mainColor,
         currentIndex: currentIndex,
         onTap: _bottomNavIconClicked,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home_outlined,size: 35,),label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.home_filled,size: 35,),label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.search_outlined,size: 35,),label: "Search"),
           BottomNavigationBarItem(icon: Icon(Icons.calendar_today,size: 35,),label: "Reservation"),
           BottomNavigationBarItem(icon: Icon(Icons.person,size: 35,),label: "Me"),
