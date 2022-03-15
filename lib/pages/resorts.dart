@@ -1,6 +1,7 @@
 import 'package:check_in/misc/AppColor.dart';
 import 'package:check_in/pages/home.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:check_in/pages/my_profile.dart';
+import 'package:check_in/pages/reservation.dart';
 import 'package:flutter/material.dart';
 
 class Resorts extends StatefulWidget {
@@ -20,18 +21,8 @@ class _ResortsState extends State<Resorts> {
   }
   @override
   Widget build(BuildContext context) {
+    var list = [Home(),MyProfile(),Reservation(),MyProfile(),Home()];
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: AppColors.mainColor,
-        title: Text('Resorst',style: TextStyle(color: Colors.white),),
-        leading: Icon(Icons.arrow_back_ios_rounded),
-        actions: [
-          Icon(Icons.filter_alt),
-          Icon(Icons.thumbs_up_down_rounded),
-        ],
-        centerTitle: true,
-
-      ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
@@ -48,7 +39,7 @@ class _ResortsState extends State<Resorts> {
           BottomNavigationBarItem(icon: Icon(Icons.person,size: 35,),label: "Me"),
 
       ],),
-      body: Home(),
+      body: list[currentIndex],
     );
   }
 }

@@ -1,3 +1,5 @@
+import 'package:check_in/pages/invoices_payment.dart';
+import 'package:check_in/pages/my_profile.dart';
 import 'package:check_in/pages/resorts.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: Resorts(),
+          home: InvoicesPayment(),
         );
       },
 
