@@ -1,6 +1,7 @@
 import 'package:check_in/misc/AppColor.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class MyProfile extends StatefulWidget {
   const MyProfile({Key? key}) : super(key: key);
@@ -61,7 +62,9 @@ class _MyProfileState extends State<MyProfile> {
                       Text(
                         'Profile',
                         style: TextStyle(
-                            fontSize: 20,color: AppColors.mainColor,),
+                          fontSize: 20,
+                          color: AppColors.mainColor,
+                        ),
                       ),
                       SizedBox(
                         height: 20,
@@ -71,15 +74,14 @@ class _MyProfileState extends State<MyProfile> {
                         children: [
                           Row(
                             children: [
-                              Icon(Icons.person,color: AppColors.mainColor),
+                              Icon(Icons.person, color: AppColors.mainColor),
                               SizedBox(
                                 width: 10,
                               ),
                               Text(
                                 'My profile',
                                 style: TextStyle(
-                                    fontSize: 16,
-                                    color: AppColors.mainColor),
+                                    fontSize: 16, color: AppColors.mainColor),
                               )
                             ],
                           ),
@@ -96,8 +98,7 @@ class _MyProfileState extends State<MyProfile> {
               Card(
                 margin: EdgeInsets.only(bottom: 3),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(0)
-                ),
+                    borderRadius: BorderRadius.circular(0)),
                 elevation: 1,
                 child: Container(
                   padding: EdgeInsets.all(20),
@@ -109,15 +110,15 @@ class _MyProfileState extends State<MyProfile> {
                         children: [
                           Row(
                             children: [
-                              Icon(Icons.notifications_none,color: AppColors.mainColor),
+                              Icon(Icons.notifications_none,
+                                  color: AppColors.mainColor),
                               SizedBox(
                                 width: 10,
                               ),
                               Text(
                                 'Notifications',
                                 style: TextStyle(
-                                    fontSize: 16,
-                                    color: AppColors.mainColor),
+                                    fontSize: 16, color: AppColors.mainColor),
                               )
                             ],
                           ),
@@ -134,8 +135,7 @@ class _MyProfileState extends State<MyProfile> {
               Card(
                 margin: EdgeInsets.only(bottom: 3),
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0)
-                ),
+                    borderRadius: BorderRadius.circular(0)),
                 elevation: 1,
                 child: Container(
                   padding: EdgeInsets.all(20),
@@ -147,15 +147,14 @@ class _MyProfileState extends State<MyProfile> {
                         children: [
                           Row(
                             children: [
-                              Icon(Icons.payment,color: AppColors.mainColor),
+                              Icon(Icons.payment, color: AppColors.mainColor),
                               SizedBox(
                                 width: 10,
                               ),
                               Text(
                                 'Payments',
                                 style: TextStyle(
-                                    fontSize: 16,
-                                    color: AppColors.mainColor),
+                                    fontSize: 16, color: AppColors.mainColor),
                               )
                             ],
                           ),
@@ -186,15 +185,15 @@ class _MyProfileState extends State<MyProfile> {
                         children: [
                           Row(
                             children: [
-                              Icon(Icons.currency_exchange_rounded,color: AppColors.mainColor),
+                              Icon(Icons.currency_exchange_rounded,
+                                  color: AppColors.mainColor),
                               SizedBox(
                                 width: 10,
                               ),
                               Text(
                                 'Currency',
                                 style: TextStyle(
-                                    fontSize: 16,
-                                    color: AppColors.mainColor),
+                                    fontSize: 16, color: AppColors.mainColor),
                               )
                             ],
                           ),
@@ -208,7 +207,9 @@ class _MyProfileState extends State<MyProfile> {
                   ),
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               Card(
                 margin: EdgeInsets.only(bottom: 3),
                 shape: RoundedRectangleBorder(
@@ -224,8 +225,8 @@ class _MyProfileState extends State<MyProfile> {
                     children: [
                       Text(
                         'Profile',
-                        style: TextStyle(
-                            fontSize: 20, color: AppColors.mainColor),
+                        style:
+                            TextStyle(fontSize: 20, color: AppColors.mainColor),
                       ),
                       SizedBox(
                         height: 20,
@@ -235,15 +236,14 @@ class _MyProfileState extends State<MyProfile> {
                         children: [
                           Row(
                             children: [
-                              Icon(Icons.language,color: AppColors.mainColor),
+                              Icon(Icons.language, color: AppColors.mainColor),
                               SizedBox(
                                 width: 10,
                               ),
                               Text(
                                 'Language',
                                 style: TextStyle(
-                                    fontSize: 16,
-                                    color: AppColors.mainColor),
+                                    fontSize: 16, color: AppColors.mainColor),
                               )
                             ],
                           ),
@@ -260,8 +260,7 @@ class _MyProfileState extends State<MyProfile> {
               Card(
                 margin: EdgeInsets.only(bottom: 3),
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0)
-                ),
+                    borderRadius: BorderRadius.circular(0)),
                 elevation: 1,
                 child: Container(
                   padding: EdgeInsets.all(20),
@@ -273,16 +272,18 @@ class _MyProfileState extends State<MyProfile> {
                         children: [
                           Row(
                             children: [
-                              Icon(Icons.notifications_none,color: AppColors.mainColor,),
+                              Icon(
+                                Icons.notifications_none,
+                                color: AppColors.mainColor,
+                              ),
                               SizedBox(
                                 width: 10,
                               ),
-                              Text(
-                                'About',
-                                style: TextStyle(
+                              Text('About',
+                                  style: TextStyle(
                                     fontSize: 16,
                                     color: AppColors.mainColor,
-                              ))
+                                  ))
                             ],
                           ),
                           Icon(
@@ -298,8 +299,7 @@ class _MyProfileState extends State<MyProfile> {
               Card(
                 margin: EdgeInsets.only(bottom: 3),
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0)
-                ),
+                    borderRadius: BorderRadius.circular(0)),
                 elevation: 1,
                 child: Container(
                   padding: EdgeInsets.all(20),
@@ -311,15 +311,15 @@ class _MyProfileState extends State<MyProfile> {
                         children: [
                           Row(
                             children: [
-                              Icon(Icons.question_answer_outlined,color: AppColors.mainColor),
+                              Icon(Icons.question_answer_outlined,
+                                  color: AppColors.mainColor),
                               SizedBox(
                                 width: 10,
                               ),
                               Text(
                                 'FAQ',
                                 style: TextStyle(
-                                    fontSize: 16,
-                                    color: AppColors.mainColor),
+                                    fontSize: 16, color: AppColors.mainColor),
                               )
                             ],
                           ),
@@ -350,15 +350,15 @@ class _MyProfileState extends State<MyProfile> {
                         children: [
                           Row(
                             children: [
-                              Icon(Icons.phone_in_talk_rounded,color: AppColors.mainColor),
+                              Icon(Icons.phone_in_talk_rounded,
+                                  color: AppColors.mainColor),
                               SizedBox(
                                 width: 10,
                               ),
                               Text(
                                 'Contact us',
                                 style: TextStyle(
-                                    fontSize: 16,
-                                    color: AppColors.mainColor),
+                                    fontSize: 16, color: AppColors.mainColor),
                               )
                             ],
                           ),
@@ -370,6 +370,119 @@ class _MyProfileState extends State<MyProfile> {
                       )
                     ],
                   ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Card(
+                margin: EdgeInsets.only(bottom: 3),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(15),
+                      topRight: Radius.circular(15)),
+                ),
+                elevation: 1,
+                child: Container(
+                  padding: EdgeInsets.all(20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'More',
+                        style:
+                            TextStyle(fontSize: 20, color: AppColors.mainColor),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Icon(Icons.privacy_tip_outlined,
+                                  color: AppColors.mainColor),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                'Privacy',
+                                style: TextStyle(
+                                    fontSize: 16, color: AppColors.mainColor),
+                              )
+                            ],
+                          ),
+                          Icon(
+                            Icons.arrow_forward_ios_outlined,
+                            color: AppColors.secondaryColor,
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.zero,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(15),
+                        bottomRight: Radius.circular(15))),
+                elevation: 1,
+                child: Container(
+                  padding: EdgeInsets.all(20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Icon(Icons.phone_in_talk_rounded,
+                                  color: AppColors.mainColor),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                'Terms and Conditions',
+                                style: TextStyle(
+                                    fontSize: 16, color: AppColors.mainColor),
+                              )
+                            ],
+                          ),
+                          Icon(
+                            Icons.note,
+                            color: AppColors.secondaryColor,
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              SizedBox(
+                width: double.maxFinite,
+                height: 6.h,
+                child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Logout',
+                      style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  style: ElevatedButton.styleFrom(
+                    primary: AppColors.mainColor,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                    elevation: 2
+                  ),
+
                 ),
               ),
             ],
