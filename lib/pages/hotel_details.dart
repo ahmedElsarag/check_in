@@ -1,4 +1,5 @@
 import 'package:check_in/misc/AppColor.dart';
+import 'package:check_in/pages/ReviewDialog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -280,9 +281,30 @@ class _HotelDetailsState extends State<HotelDetails> {
                     borderRadius: BorderRadius.circular(15),
                   ),
                 ),
-                Text(
-                  'Reviews',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Reviews",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        showDialog(context: context, builder: (BuildContext context){
+                          return ReviewDialog();
+                        });
+                      },
+                      child: Text(
+                        'Add Review',
+                        style: TextStyle(
+                          color: AppColors.mainColor,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 SizedBox(
                   height: 10,

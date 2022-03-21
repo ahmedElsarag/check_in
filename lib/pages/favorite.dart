@@ -1,120 +1,151 @@
+import 'package:check_in/misc/AppColor.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-import '../misc/AppColor.dart';
-
-class FavoritScreen extends StatefulWidget {
-  const FavoritScreen({Key? key}) : super(key: key);
+class Favorite extends StatefulWidget {
+  const Favorite({Key? key}) : super(key: key);
 
   @override
-  State<FavoritScreen> createState() => _FavoritScreenState();
+  State<Favorite> createState() => _FavoriteState();
 }
 
-class _FavoritScreenState extends State<FavoritScreen> {
+class _FavoriteState extends State<Favorite> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Favorit'),
-        leading: Icon(Icons.arrow_back),
         backgroundColor: AppColors.mainColor,
+        title: Text('Favorite',style: TextStyle(color: Colors.white),),
+        leading: Icon(Icons.arrow_back_ios_rounded),
+
       ),
-      body: Container(
-          child: GridView.builder(
-              itemCount: 12,
-              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                  maxCrossAxisExtent: 50.w,
-                  childAspectRatio: 2 / 3,
-                  crossAxisSpacing: 0,
-                  mainAxisSpacing: 20),
-              itemBuilder: (context, index) {
-                return Container(
-                  margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                  decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                  child: Card(
-                    elevation: 2,
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    child: Container(
-                      child: Column(
-                        children: [
-                          Stack(
-                              alignment: AlignmentDirectional.topEnd,
-                              children: [
-                                Image(
-                                  width: double.maxFinite,
-                                  height: 20.h,
-                                  image: AssetImage('asset/hotel.jpg'),
-                                  fit: BoxFit.cover,
-                                ),
-                                Container(
-                                  width: 35,
-                                  height: 35,
-                                  margin: EdgeInsetsDirectional.only(end: 30),
-                                  decoration: BoxDecoration(
-                                      color: Colors.black.withOpacity(.7),
-                                      borderRadius: BorderRadius.only(
-                                          bottomRight: Radius.circular(10),
-                                          bottomLeft: Radius.circular(10))),
-                                  child: InkWell(
-                                    child: Icon(
-                                      Icons.bookmark,
-                                      color: AppColors.secondaryColor,
-                                    ),
-                                    onTap: (){
-
-                                    },
-                                  ),
-                                )
-                              ]),
-                          SizedBox(
-                            height: 30,
-                          ),
-                          Text(
-                            'Helton Hotel',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w400,
-                                fontSize: 18),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            '445 SAR',
-                            style: TextStyle(
-                                color: AppColors.secondaryColor,
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: List.generate(5, (index) {
-                                return Icon(
-                                  Icons.star,
-                                  color: index > 2
-                                      ? AppColors.starColor2
-                                      : AppColors.starColor,
-                                );
-                              })),
-                          SizedBox(height: 20,),
-                          OutlinedButton(
-                            onPressed: () {},
-                            child: Text('Check Avilability',style: TextStyle(color: AppColors.mainColor)),
-                            style: OutlinedButton.styleFrom(
-                              side: BorderSide(width: 1, color: AppColors.mainColor),
+      body:Container(
+        child: ListView.builder(
+            itemCount: 10,
+            itemBuilder: (BuildContext context, int index) {
+              return Card(
+                elevation: 2,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)
+                ),
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                margin: index==9?EdgeInsets.all(20):EdgeInsets.only(top: 20,left: 20,right: 20),
+                child: Container(
+                  width: double.maxFinite,
+                  height: 30.h,
+                  child: Column(
+                    children: [
+                      Stack(
+                          alignment: AlignmentDirectional.topEnd,
+                          children: [
+                            Image(
+                              width: double.maxFinite,
+                              height: 17.h,
+                              image: AssetImage('asset/hotel.jpg'),
+                              fit: BoxFit.cover,
                             ),
-
-                          )
-                        ],
+                            Container(
+                              width: 35,
+                              height: 35,
+                              margin: EdgeInsetsDirectional.only(end: 30),
+                              decoration: BoxDecoration(
+                                  color: Colors.black.withOpacity(.7),
+                                  borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft: Radius.circular(10))
+                              ),
+                              child: Icon(Icons.bookmark,color: AppColors.secondaryColor,),
+                            )
+                          ]),
+                      Padding(
+                        padding: EdgeInsets.symmetric(vertical: 10,horizontal: 15),
+                        child: Row(
+                          children: [
+                            Container(
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: Color.fromRGBO(255, 215, 0, 1),
+                                  ),
+                                  SizedBox(width: 3,),
+                                  Text(
+                                    '5',
+                                    style: TextStyle(fontWeight: FontWeight.bold),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Spacer(),
+                            Container(
+                              child: Text('Helton hotel',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold, fontSize: 16)),
+                            )
+                          ],
+                        ),
                       ),
-                    ),
+                      Padding(
+                        padding: const EdgeInsetsDirectional.only(bottom: 10,start: 20),
+                        child: Row(
+                          children: [
+                            Container(
+                                margin: EdgeInsetsDirectional.only(end: 10)
+                                ,child: Text(
+                              'Start with',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            )),
+                            Text(
+                              '445 SAR',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: AppColors.mainColor),
+                            )
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsetsDirectional.only(start: 15,end: 15),
+                        child: Row(
+                          children: [
+                            Container(
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.location_on,
+                                    color: Colors.grey,
+                                  ),
+                                  Text(
+                                    'Alduha, Qatar',
+                                    style: TextStyle(fontWeight: FontWeight.bold,color: Colors.grey),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Spacer(),
+                            Container(
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.send_sharp,
+                                    color: AppColors.mainColor,
+                                  ),
+                                  SizedBox(width: 4,),
+                                  Text(
+                                    '12.5KM',
+                                    style: TextStyle(fontWeight: FontWeight.bold,color:  AppColors.mainColor),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                );
-              })),
+                ),
+              );
+            }),
+      ) ,
     );
+
   }
 }

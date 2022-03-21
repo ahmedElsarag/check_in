@@ -1,3 +1,4 @@
+import 'package:check_in/pages/ReviewDialog.dart';
 import 'package:check_in/pages/check_avilability.dart';
 import 'package:check_in/pages/favorite.dart';
 import 'package:check_in/pages/home.dart';
@@ -7,7 +8,9 @@ import 'package:check_in/pages/my_profile.dart';
 import 'package:check_in/pages/notification.dart';
 import 'package:check_in/pages/pay_invoice.dart';
 import 'package:check_in/pages/profile_page.dart';
+import 'package:check_in/pages/reservation.dart';
 import 'package:check_in/pages/resorts.dart';
+import 'package:check_in/pages/reviews_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -28,7 +31,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: ProfileScreen(),
+          home: HotelDetails(),
         );
       },
 
